@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Page title shown in browser tab -->
+  <title>Contact Us | Your School</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+ <header class="site-header">
+    <div class="container header-container">
+      <!-- School logo -->
+      <img src="https://media.istockphoto.com/id/1550255817/vector/font-design-for-word-magic-land-with-wizard-cartoon-character.jpg?s=612x612&w=0&k=20&c=bBiJ1_bTFgQTXDcgSlA9gpexxPagQMoZczY0aMmuujc=" alt="School Logo" class="logo" />
+       <!-- Navigation Menu -->
+        <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <!-- BANNER SECTION WITH VIDEO BACKGROUND -->
+  <section class="page-banner">
+    <!-- Contact-themed video playing in the background -->
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="contact.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+     <!-- Overlay with heading text -->
+    <div class="hero-video-overlay">
+    <div class="hero-content">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you</p>
+    </div>
+    </div>
+  </section>
+
+    <!-- MAIN CONTACT SECTION WITH FORM AND MAP -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Contact form for user inquiries -->
+      <div class="contact-form">
+        <h3>Send Us a Magic Message🪄</h3>
+        <form action="#" method="post">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message🪄</button>
+        </form>
+      </div>
+      <!-- Embedded Google Map showing location -->
+      <div class="contact-map">
+        <h3>Find Us🚆</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Magic School | All Rights Reserved</p>
+    <p>Email: info@yourmagicschool.edu | Phone: +44-145-523-7790</p>
+  </footer>
+
+</body>
+</html>

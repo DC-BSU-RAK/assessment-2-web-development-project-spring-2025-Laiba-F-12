@@ -1,0 +1,738 @@
+/* Magic Theme Fonts */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #0b0c1e;
+  color: #f0f0f0;
+}
+
+/* Hero & Welcome Overlay Glow */
+.hero-video-overlay, .welcome-overlay {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+/* Glowing Headings */
+h1, h2 {
+  font-family: 'MedievalSharp', cursive;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff6, 0 0 30px #f0f;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Particle Background for Hero */
+.hero-video-section::before,
+.welcome-section-video::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://cdn.pixabay.com/photo/2022/12/10/06/20/stars-7645379_960_720.png') repeat;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+  opacity: 0.05;
+}
+
+/* Floating Particles Animation */
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #fffa, 0 0 10px #ffc, 0 0 20px #f0f; }
+  100% { text-shadow: 0 0 10px #f0f, 0 0 20px #fc0, 0 0 30px #fff; }
+}
+
+/* Card Hover Effects */
+.feature-card {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Glowing Navigation Links */
+.main-nav a {
+  color: #fff9c4;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffc107;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.4s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: rotate(25deg);
+  animation: shimmer 6s infinite linear;
+  z-index: 0;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .site-header {
+    background: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .main-nav a {
+    color: #003366;
+    font-weight: 500;
+    padding: 6px 10px;
+  }
+  
+  .main-nav a.active,
+  .main-nav a:hover {
+    border-bottom: 2px solid #003366;
+  }
+
+
+  
+  /* Hero */
+  .hero {
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+  }
+
+  .hero-video-section {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .hero-bg-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .hero-video-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4); /* darkens the video for text contrast */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-video-overlay .hero-text {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero-video-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .hero-video-overlay p {
+    font-size: 20px;
+  }
+  
+  
+  /* Welcome Section */
+  .welcome {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+  }
+  
+  .welcome h2 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  .welcome p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+  }
+
+  /* Welcome Video Background Section */
+.welcome-section-video {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .welcome-bg-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .welcome-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .welcome-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+  }
+  
+  .welcome-text p {
+    max-width: 800px;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  
+  
+  /* Feature Cards */
+  .features {
+    background: #8c0328;
+    padding: 60px 20px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .feature-card h3 {
+    margin-top: 15px;
+    color: #002244;
+    font-size: 22px;
+  }
+  
+  .site-footer {
+  background: radial-gradient(ellipse at top, #1a1a2e, #0b0c1e);
+  color: #eee;
+  padding: 40px 20px;
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add stars in background */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2022/12/10/06/20/stars-7645379_960_720.png') repeat;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.site-footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+  /* Footer */
+  .site-footer {
+    background: #002244;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    color: white;
+    font-weight: 500;
+  }
+  
+/* About Banner */
+.page-banner {
+    background: url('../images/about-hero.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  
+  .page-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .page-banner .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .page-banner h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  
+  .page-banner p {
+    font-size: 18px;
+  }
+  
+  /* About Page Layout */
+  .about-page {
+    padding: 80px 10%;
+    background-color: goldenrod;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .about-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #002244;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+ /* About Video with Text Overlay */
+.about-video-section {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-bg-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .about-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .about-overlay-text {
+    color: white;
+    padding: 0 20px;
+    max-width: 800px;
+  }
+  
+  .about-overlay-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+  }
+  
+  .about-overlay-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  
+/* Admissions Section */
+.admissions-section {
+    background-color: goldenrod;
+    padding: 80px 10%;
+  }
+  
+  .admissions-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .admissions-container h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #002244;
+  }
+  
+  .admissions-container p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+  
+  .admissions-container ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .admissions-container ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .admissions-image-banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.admissions-bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(60%); /* darkens image for text readability */
+}
+
+.admissions-overlay-text {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.admissions-overlay-text h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.admissions-overlay-text p {
+  font-size: 18px;
+  max-width: 700px;
+}
+
+  
+/* Academics Section */
+.academics-section {
+    background-color: goldenrod;
+    padding: 80px 10%;
+  }
+  
+  .academics-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .academics-container h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #002244;
+  }
+  
+  .academics-container p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .academic-levels .level {
+    margin-bottom: 40px;
+  }
+  
+  .academic-levels h4 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .academic-levels p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .academics-image-banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.academics-bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(60%);
+}
+
+.academics-overlay-text {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.academics-overlay-text h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.academics-overlay-text p {
+  font-size: 18px;
+  max-width: 700px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 10%;
+    background-color: goldenrod;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .contact-form,
+  .contact-map {
+    flex: 1 1 400px;
+  }
+  
+  .contact-form h3,
+  .contact-map h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #002244;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    background-color: #002244;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #004080;
+  }
+
+ 
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  }
+          

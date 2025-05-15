@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Title that appears in the browser tab -->
+  <title>Magic School | Welcome</title>
+
+   <!-- Link to external CSS file where all visual styles are written -->
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<!-- Importing custom fonts from Google Fonts to give a magical and clean look -->
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Ubuntu&display=swap" rel="stylesheet">
+
+<!-- Animate On Scroll (AOS) Library for scroll-triggered animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init(); // This activates AOS animations throughout the site
+</script>
+
+  
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+       <!-- Logo Image for branding -->
+      <img src="https://media.istockphoto.com/id/1550255817/vector/font-design-for-word-magic-land-with-wizard-cartoon-character.jpg?s=612x612&w=0&k=20&c=bBiJ1_bTFgQTXDcgSlA9gpexxPagQMoZczY0aMmuujc=" alt="School Logo" class="logo" />
+      <!-- Main navigation menu to move between site pages -->
+      <nav class="main-nav">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero with video background -->
+  <section class="hero-video-section">
+     <!-- Video background playing on loop, muted for smooth viewing -->
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="magicvideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Text overlay placed on top of the video using z-index and CSS -->
+    <div class="hero-video-overlay">
+      <div class="hero-text">
+        <h1>💡It Always Seems Impossible Until It's Done💡.</h1>
+        <p>Be yourself everyone else is already taken🫰.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section-video">
+     <!-- Background video specific to the welcome message -->
+    <video autoplay muted loop playsinline class="welcome-bg-video">
+      <source src="books.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+     <!-- Overlaying welcome text with semi-transparent background for readability -->
+    <div class="welcome-overlay">
+      <div class="container welcome-text">
+        <h2>Welcome to your School Magicians✨</h2>
+        <p>
+          We are a forward-thinking, values-based school where each child is encouraged
+          to grow academically, socially, and personally — preparing them for a magical future.
+        </p>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- Highlights / Feature Cards -->
+  <section class="features">
+    <div class="container features-grid">
+    
+       <!-- Card 1: School's philosophy or guiding principles -->
+      <div class="feature-card">
+        <img src="https://media.istockphoto.com/id/178153852/photo/magic-show.jpg?s=612x612&w=0&k=20&c=h4SDiWv7ILq6wZl1MGC6i66ptXThCqnZrRWLJsE6Ryk=" alt="Our Ethos" />
+        <h3>Our Ethos</h3>
+        <p>Rooted in creativity and care, we help students explore who they are and how they learn best.</p>
+      </div>
+
+       <!-- Card 2: Curriculum description -->
+      <div class="feature-card">
+        <img src="https://media.istockphoto.com/id/860377332/photo/dazzling-magic.jpg?s=612x612&w=0&k=20&c=cggWrCLNAGkk-l6IB2jmpn4Z8mYg5disIJXtw5Wb2MA=" alt="Curriculum" />
+        <h3>Balanced Curriculum</h3>
+        <p>A rich, holistic curriculum built around exploration, innovation, and wellbeing.</p>
+      </div>
+
+       <!-- Card 3: Emphasis on community belonging -->
+      <div class="feature-card">
+        <img src="https://images.unsplash.com/photo-1672165635420-a688113b5a2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFycnklMjBwb3R0ZXIlMjBzY2hvb2x8ZW58MHx8MHx8fDA%3D" alt="Community" />
+        <h3>Community Spirit</h3>
+        <p>We foster respect, inclusion, and a strong sense of belonging within our school family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION WITH CONTACT DETAILS -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- School contact information: phone, email, address -->
+      <div>
+        <p><strong>Magic School</strong><br>
+        Train station 7<br>
+        Scotland<br>
+        +44-145-523-7790<br>
+        info@yourmagicschool.edu</p>
+      </div>
+       <!-- Quick links to main pages, repeated for accessibility -->
+      <div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
